@@ -3,6 +3,7 @@
 	<substitutionProperty name="pro.name" value="myredis" />
 	<substitutionProperty name="log.base" value="logs/myredis" />
 	<substitutionProperty name="max.size" value="100MB" />
+	<substitutionProperty name="max.history" value="2" />
 	<jmxConfigurator />
 	
 	<!-- 控制台输出 -->
@@ -20,6 +21,7 @@
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<FileNamePattern>${log.base}/${pro.name}_%d{yyyy-MM-dd}.%i.log.gz
 			</FileNamePattern>
+			<MaxHistory>${max.history}</MaxHistory>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>${max.size}</maxFileSize>
