@@ -18,7 +18,7 @@
 		class="ch.qos.logback.core.rolling.RollingFileAppender"><!-- All Log Info -->
 		<File>${log.base}/${pro.name}.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>${log.base}/${pro.name}_%d{yyyy-MM-dd}.%i.log
+			<FileNamePattern>${log.base}/${pro.name}_%d{yyyy-MM-dd}.%i.log.gz
 			</FileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
